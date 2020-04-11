@@ -5,8 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reuseable/HeroSection"
 import InfoBlock from "../components/Reuseable/InfoBlock"
-import DualInfoBlock from "../components/Reuseable/DualInfoBlock"
-import TeamPhotoSection from "../components/About/TeamPhotoSection"
+import Contact from "../components/Contact/Contact"
 
 const ContactUS = ({ data }) => (
   <Layout>
@@ -17,14 +16,13 @@ const ContactUS = ({ data }) => (
       subtitle=""
       heroClass="about-background"
     />
-    <DualInfoBlock heading="A message from CEO"/>
-    <InfoBlock heading="About Our Vision"/>
-    <TeamPhotoSection />
+    <InfoBlock heading="How can wee help?"/>
+    <Contact />
   </Layout>
 )
 
 export const query = graphql`{
-  img: file(relativePath: {eq: "about.png"}) {
+  img: file(relativePath: {eq: "contact.png"}) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG
